@@ -24,7 +24,6 @@ class TransactionController {
 
     @GetMapping("/admin/flagged-transactions")
     public List<Map<String, String>> getFlaggedTransactions(@RequestHeader("Authorization") String authorization) {
-        // Placeholder for authorization validation logic
         if (!"admin-token".equals(authorization)) {
             throw new SecurityException("Unauthorized access");
         }
