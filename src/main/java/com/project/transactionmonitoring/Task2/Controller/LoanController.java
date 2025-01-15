@@ -24,7 +24,6 @@ public class LoanController {
     }
     @GetMapping("admin/loan-statistics")
     public Map<String, Object> getLoanStatistics(@RequestHeader("Authorization") String authorization) {
-        // Placeholder for authorization validation logic
         if (!"admin-token".equals(authorization)) {
             throw new SecurityException("Unauthorized access");
         }
